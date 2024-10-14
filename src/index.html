@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Excel Tool</title>
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row mb-3">
+        <div class="col-6 p-1">
+          <div class="p-2 border rounded shadow-sm">
+            <div class="mb-2">Import:</div>
+            <div class="input-group mb-2">
+              <button
+                class="btn btn-sm btn-outline-secondary"
+                type="button"
+                id="openFileDialogBtn1"
+              >
+                Excel 1
+              </button>
+              <input
+                id="filePath1Input"
+                type="text"
+                class="form-control"
+                placeholder=""
+                aria-label="Example text with button addon"
+                aria-describedby="openFileDialogBtn1"
+                disabled
+              />
+            </div>
+            <div class="input-group">
+              <button
+                class="btn btn-sm btn-outline-secondary"
+                type="button"
+                id="openFileDialogBtn2"
+              >
+                Excel 2
+              </button>
+              <input
+                id="filePath2Input"
+                type="text"
+                class="form-control"
+                placeholder=""
+                aria-label="Example text with button addon"
+                aria-describedby="openFileDialogBtn2"
+                disabled
+              />
+            </div>
+          </div>
+        </div>
+        <div class="col-6 p-1">
+          <div class="p-1 border rounded shadow-sm">
+            <div class="mb-2">Foriegn Key:</div>
+            <select
+              id="selectForeignKey1"
+              class="form-select mb-2"
+              aria-label="Default select example"
+            ></select>
+            <select
+              id="selectForeignKey2"
+              class="form-select"
+              aria-label="Default select example"
+            ></select>
+          </div>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-6 p-1">
+          <div id="fields1" class="p-1 border rounded shadow-sm"></div>
+        </div>
+        <div class="col-6 p-1">
+          <div id="fields2" class="p-1 border rounded shadow-sm"></div>
+        </div>
+      </div>
+      <div class="row mb-3"></div>
+      <div class="row mb-2">
+        <div
+          class="d-flex gap-1 flex-row justify-content-start align-items-center flex-nowrap"
+        >
+          <strong>Export Columns: </strong>
+          <div
+            id="fieldsCheckedContainer"
+            class="d-flex flex-row gap-2 justify-content-start align-items-center flex-nowrap"
+            style="overflow-x: auto; scrollbar-width: 0.25rem"
+          ></div>
+        </div>
+      </div>
+      <div class="row px-2">
+        <div
+          class="alert alert-primary d-flex justify-content-end align-items-center p-2"
+        >
+          <div id="exportBtn" class="btn btn-success">Export</div>
+        </div>
+      </div>
+    </div>
+    <script src="./renderer.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
